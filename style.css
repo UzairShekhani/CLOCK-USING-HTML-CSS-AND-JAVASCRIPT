@@ -1,0 +1,144 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.stand-by{
+    width: 90%;
+    height: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.clock{
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.points{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.point{
+    width: 1px;
+    height: 12px;
+    display: block;
+    border: 0.2mm solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0.8mm;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 0.3mm);
+    
+}
+.point.big{
+    height: 14px;
+    width: 1px;
+    border: 0.3mm solid rgba(225, 225, 225, 0.8);
+    background: white;
+    top: calc(50% - 7px);
+    left: calc(50% - 0.2mm);
+}
+.point.big .text{
+    font-family: inter;
+    color: white;
+    position: absolute;
+    top: 100%;
+    font-size: 30px;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    left: calc(50% - 20px);
+}
+.seconds,
+.minutes,
+.hours{
+    width: 2px;
+    height: 155px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 1px);
+    border-radius: 0.6mm;
+    transform-origin: 1px 0;
+}
+.seconds{
+    height: 182px;
+    transform-origin: 1px 26px;
+    top: calc(50% - 26px);
+    background: orange;
+    transform: rotate(30deg);
+}
+.minutes,
+.hours{
+    background: white;
+}
+.hours{
+    height: 110px;   
+    transform: rotate(-30deg);
+}
+.minutes::before, .hours::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50% , 0);
+    width: 12px;
+    height: calc(100% - 22px);
+    background: white;
+    border-radius: 2mm;
+}
+.pivot,.pivot::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 10px;
+    height: 10px;
+    background: black;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.pivot::before{
+    content: "";
+    border: 3px solid orange;
+    width: 5px;
+    height: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
